@@ -28,7 +28,7 @@
     }
   }(function($) {
     "use strict";
-
+    
     //Constants
     var VERSION = "1.0.0",
         PLUGIN_NS = 'DynamicContentMenu',
@@ -46,7 +46,7 @@
         this.originalBodyPad     = null;
         this.scrollbarWidth      = 0;
         this.ignoreBackdropClick = false;
-
+        
         if (this.options.remote) {
             this.$element
             .find('.modal-content')
@@ -147,9 +147,8 @@
         highlightDefault: true
     };
 
-    DynamicContentMenu.prototype.removeBackdrop = function () {
-        this.$backdrop && this.$backdrop.remove()
-        this.$backdrop = null
+    DynamicContentMenu.prototype.hello = function () {
+        alert('Hello!');
     }
 
     // PLUGIN DEFINITION
@@ -168,7 +167,7 @@
             //only public method
             if (typeof option == 'string'){
 
-                if ( !$.isFunction( data[option] ) || options.charAt( 0 ) === "_" ) {
+                if ( !$.isFunction( data[option] ) || option.charAt( 0 ) === "_" ) {
                     $.error( "no such method '" + option + "' for " + PLUGIN_NAME +
                         " plugin instance" );
                 }
