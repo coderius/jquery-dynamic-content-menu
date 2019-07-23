@@ -1,14 +1,14 @@
 Jquery dynamic content menu
 ===========================
-Example ![alt text](https://github.com/coderius/jquery-dynamic-content-menu/blob/master/demos/index.html "html code and include plugin & basic config")
+**This plugin on the fly creates a menu of the current page. By clicking on any menu item, the plugin moves to this item on the page. By default, menu items are formed from headline tests h1, h2, h3. 
+But you can specify any tags, css classes or id elements that will take part in the formation of the menu.**
+
+See code example - [html code and include plugin & basic config](https://github.com/coderius/jquery-dynamic-content-menu/blob/master/demos/index.html)
 
 
 Basic usage.
 -----------
 Include CSS and JavaScript files.
-
-This plugin on the fly creates a menu of the current page. By clicking on any menu item, the plugin moves to this item on the page. By default, menu items are formed from headline tests h1, h2, h3. 
-But you can specify any tags, css classes or id elements that will take part in the formation of the menu.
 
 Between <head> ... </head> include css
 
@@ -59,5 +59,6 @@ And use in html:
 
 License
 -------
-Copyright (c) 2010-2019 Sergio Coderius.
+*Copyright (c) 2010-2019 Sergio Coderius.*
+
 **jquery-dynamic-content-menu** plugin is released under the MIT License (MIT). See the bundled LICENSE.md for details.
