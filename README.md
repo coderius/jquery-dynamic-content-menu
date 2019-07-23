@@ -5,6 +5,7 @@ But you can specify any tags, css classes or id elements that will take part in 
 
 See code example - [html code and include plugin & basic config](https://github.com/coderius/jquery-dynamic-content-menu/blob/master/demos/index.html)
 
+![Jquery dynamic content menu](https://github.com/coderius/github-images/blob/master/ezgif.com-video-to-gif.gif "Jquery dynamic content menu")
 
 Basic usage.
 -----------
