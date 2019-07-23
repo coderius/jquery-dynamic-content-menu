@@ -35,8 +35,7 @@
         PLUGIN_NAME = 'dynamicContentMenu',
         pluginClassName = PLUGIN_NAME,
         // pluginClass = "." + pluginClassName,
-        pluginFocusClassName = PLUGIN_NAME + "_focus",
-        pluginHoverClassName = PLUGIN_NAME + "_hover",
+        pluginFocusClassName = "active",
         pluginHideClassName = PLUGIN_NAME + "_hide",
         // pluginHideClass = "." + pluginHideClassName,
         headerClassName = PLUGIN_NAME + "__header",
@@ -54,7 +53,6 @@
         this.options             = options;
         this.$element  = $(element);
         this._create(element);
-        
     }
 
     DynamicContentMenu.DEFAULTS  = {
@@ -163,6 +161,9 @@
         // Generates the HTML for the dynamic table of contents
         self._generateHtmlMenu();
 
+        // Add theme
+        self._addCSSTheme();
+
         // Adds CSS classes to the newly generated table of contents HTML
         self._addCSSClasses();
 
@@ -188,13 +189,13 @@
 
         // Adds jQuery event handlers to the newly generated table of contents
         self._setEventHandlers();
-
+        
         // Binding to the Window load event to make sure the correct scrollTop is calculated
-        $(window).on('load', function() {
-
+        $(window).on("load", function(e) {
+            
             // Sets the active DynamicContentMenu item
             self._setActiveElement(true);
-
+            
             // Once all animations on the page are complete, this callback function will be called
             $("html, body").promise().done(function() {
 
@@ -260,7 +261,7 @@
             if($(this).is(ignoreSelector)) {
                 return;
             }
-            //console.log(self);
+            
             // Creates an unordered list HTML element and adds a dynamic ID and standard class name
             ul = $("<ul/>", {
                 "id": headerClassName + index,
@@ -268,7 +269,7 @@
             }).
             // Appends a top level list item HTML element to the previously created HTML header
             append(self._nestElements($(this), index));
-            //console.log(self);
+            
             // Add the created unordered list element to the HTML element calling the plugin
             self.$element.append(ul);
 
@@ -327,7 +328,7 @@
 
             // Removes highlighting from all of the list item's
             self.$element.find("." + self.focusClass).removeClass(self.focusClass);
-
+            
             // Highlights the current list item that was clicked
             elem.addClass(self.focusClass);
 
@@ -709,7 +710,7 @@
 
                         // If the `showAndHideOnScroll` option is true
                         if(self.options.showAndHideOnScroll && self.options.showAndHide) {
-                            //console.log(elem)
+                            
                             self._triggerShow(elem, true);
 
                         }
@@ -894,37 +895,29 @@
 
     };
 
+    // _addCSSTheme
+    // --------------
+    // Adds CSS classes theme
+    DynamicContentMenu.prototype._addCSSTheme = function() {
+
+        // If the user wants a material theme
+         if(this.options.theme === "material") {
+            this.$element.addClass("scod-theme-material");
+
+        }
+
+        //Maintains chainability
+        return this;
+
+    };
+
     // _addCSSClasses
     // --------------
     //      Adds CSS classes to the newly generated table of contents HTML
     DynamicContentMenu.prototype._addCSSClasses = function() {
 
-        // If the user wants a twitterBootstrap theme
-        if(this.options.theme === "bootstrap_3") {
-
-            this.$element.find(headerClass + "," + subheaderClass).addClass("nav nav-list");
-
-            this.focusClass = "active";
-
-        }
-        else if(this.options.theme === "material") {
-
-            this.$element.find(headerClass + "," + subheaderClass).addClass("nav flex-column");
-
-            this.focusClass = "active";
-
-        }
-        // If a user does not want a prebuilt theme
-        else {
-
-            // Adds more neutral classes (instead of jqueryui)
-
-            this.focusClass = pluginFocusClassName;
-
-            this.hoverClass = pluginHoverClassName;
-
-        }
-
+        this.$element.find(headerClass + "," + subheaderClass).addClass("scod-flex-container");
+        this.focusClass = pluginFocusClassName;
         //Maintains chainability
         return this;
 
