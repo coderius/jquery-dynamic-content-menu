@@ -1,0 +1,27 @@
+{
+  "name": "jquery-dynamic-content-menu",
+  "version": "1.0.0",
+  "description": "Dynamically generated content menu for easy navigation on a separate web page. ",
+  "main": "jquery-dynamic-content-menu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderius/jquery-dynamic-content-menu.git"
+  },
+  "keywords": [
+    "plugin",
+    "content",
+    "menu"
+  ],
+  "dependencies": {
+    "jquery": ">=2.2"
+  },
+  "author": "Sergio Coderius",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderius/jquery-dynamic-content-menu/issues"
+  },
+  "homepage": "https://github.com/coderius/jquery-dynamic-content-menu#readme"
+}
