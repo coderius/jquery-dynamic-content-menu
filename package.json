@@ -1,6 +1,6 @@
 {
   "name": "jquery-dynamic-content-menu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dynamically generated content menu for easy navigation on a separate web page. ",
   "main": "jquery-dynamic-content-menu.js",
   "scripts": {
