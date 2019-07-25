@@ -1,0 +1,22 @@
+{
+    "name": "jquery-dynamic-content-menu",
+    "version": "1.0.0",
+    "homepage": "https://github.com/coderius/jquery-dynamic-content-menu",
+    "authors": [
+        "Sergio Coderius"
+    ],
+    "description": "This plugin on the fly creates a menu of the current page.",
+    "main": "jquery-dynamic-content-menu.js",
+    "keywords": [
+        "plugin",
+        "content menu"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "demos"
+    ],
+    "dependencies": {
+        "jquery": ">=2.2"
+    }
+}
