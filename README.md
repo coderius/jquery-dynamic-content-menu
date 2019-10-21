@@ -8,7 +8,7 @@ See code example - [html code and include plugin & basic config](https://github.
 
 Plugin gif in action:
 -------------------
-![Jquery dynamic content menu](https://github.com/coderius/github-images/blob/master/ezgif.com-video-to-gif.gif "Jquery dynamic content menu")
+![Jquery dynamic content menu](https://github.com/coderius/github-images/blob/master/ezgif.com-video-to-gif.gif?raw=true "Jquery dynamic content menu")
 
 Basic usage.
 -----------
